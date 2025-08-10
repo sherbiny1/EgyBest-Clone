@@ -11,12 +11,6 @@ const schema = yup.object({
     password: yup.string().required("Password is Required").matches(regexPassword, "Minimum eight characters, at least one upper case English letter, one lower case English letter, one number and one special character"),
 })
 
-function submitFunc(values) {
-    console.log(values);
-
-    console.log("Logged In succesfully");
-}
-
 export default function Login({ themeChange, theme }) {
     let formik = useFormik({
         initialValues: { email: "", password: "" },

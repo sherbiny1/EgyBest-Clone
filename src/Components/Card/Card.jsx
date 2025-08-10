@@ -1,7 +1,7 @@
 import { Link } from "react-router"
 
 export default function Card({ cardDetails }) {
-    const { title, overview, vote_average, poster_path, media_type , id } = cardDetails
+    const { title, overview, vote_average, poster_path, id } = cardDetails
     return (
         <>
             <Link to={`/movie/${id}`} className="card bg-white rounded-xl shadow-2xl p-4 group/card dark:bg-gray-700 dark:text-white">
@@ -18,8 +18,6 @@ export default function Card({ cardDetails }) {
 
                     <p className="line-clamp-3">{overview}</p>
                 </div>
-
-
             </Link>
         </>
     )

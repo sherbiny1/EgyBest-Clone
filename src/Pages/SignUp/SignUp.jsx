@@ -13,12 +13,7 @@
         rePassword: yup.string().required("Repassword is required").oneOf([yup.ref("password")], "Enter RePassword Matches with password"),
         phone: yup.string().required("Enter Your phone number").matches(regexPhone, "Write a valid Phone number")
     })
-
-    function submitFunc(values) {
-        console.log(values);
-
-        console.log("Signed In");
-    }
+    
 
     export default function SignUp({ themeChange, theme }) {
         let formik = useFormik({

@@ -31,7 +31,7 @@ export default function Login({ themeChange, theme }) {
             setLoginError("No registered user found. Please sign up first.");
          return;
         }
-
+        //sockets io
     // Compare email and password
         if (values.email === savedUser.email &&values.password === savedUser.password) {
             localStorage.setItem("token", "fakeToken_12345"); // set token again or keep it

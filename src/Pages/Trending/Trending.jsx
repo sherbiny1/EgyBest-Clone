@@ -12,7 +12,7 @@ export default function Trending({ themeChange, theme }) {
             <li><NavLink className={({isActive})=>{return `${isActive ? "bg-violet-600 dark:bg-violet-600 text-white" : ""} w-full p-2 dark:bg-gray-500`}} to="tv">TV</NavLink></li>
         </ul>
     </aside>
-    <section className="w-100 border-gray-400/30 p-4 border-2">
+    <section className="md:w-100 w-50 border-gray-400/30 p-4 border-2">
         <Outlet/>
     </section>
   </main>

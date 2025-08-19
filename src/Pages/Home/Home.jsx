@@ -6,10 +6,7 @@ import axios from 'axios';
 import { Link, useSearchParams } from 'react-router';
 
 
-export default function Home({ themeChange, theme }) {
-    
-    // key : f8fbc5327caa9c2c38d54e27c3295ae3
-    
+export default function Home({ themeChange, theme }) {    
     const [popularMovies,setPopularMovies]=useState(null)
     const [queryStrings,setQueryStrings]=useSearchParams({page:1})
     const page=queryStrings.get("page")
@@ -31,7 +28,7 @@ export default function Home({ themeChange, theme }) {
         <>
             {popularMovies == null ? (<Loading />) : (<>
                 <Navbar themeChange={themeChange} theme={theme} />
-                <div className="container grid md:grid-cols-3 lg:grid-cols-5 px-28 py-8 gap-4 bg-gray-100 dark:bg-gray-800 ">
+                <div className="container grid md:grid-cols-3 lg:grid-cols-5 md:px-28 py-8 gap-4 bg-gray-100 dark:bg-gray-800 ">
                     {popularMovies.map((movie) => <Card key={movie.id} cardDetails={movie} />)}
                 </div>
 

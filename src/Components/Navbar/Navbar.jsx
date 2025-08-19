@@ -21,10 +21,7 @@ export default function Navbar({ themeChange, theme }) {
                                     to={`/${item}`}
                                     className={({ isActive }) =>
                                         `${isActive ? "text-violet-600 before:w-full" : "before:w-0"} 
-                                         hover:text-violet-400 transition-colors duration-300 focus:font-semibold 
-                                         relative before:w-0 hover:before:w-full before:transition[width] 
-                                         before:duration-300 before:left-0 before:-bottom-1  
-                                         before:bg-gray-700 before:h-0.5 before:absolute`
+                                         hover:text-violet-400 transition-colors duration-300 focus:font-semibold`
                                     }
                                 >
                                     {item.charAt(0).toUpperCase() + item.slice(1)}
